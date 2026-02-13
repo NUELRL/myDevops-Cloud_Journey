@@ -15,8 +15,8 @@ In this project, I deployed a complete web application infrastructure using the 
 
 ### AWS EC2 Instance Setup
 I created a new EC2 instance with the following specifications:
-  - **Instance Type:** t2.nano (Free tier eligible)
-  - **Operating System:** Ubuntu Server 22.04 LTS (HVM)
+  - **Instance Type:**  t3.micro (Free tier eligible)
+  - **Operating System:** Ubuntu Server 24.04 LTS (HVM)
   - **Security Group:** Configured to allow SSH (port 22) and HTTP (port 80)
 
 I then connected to the instance via SSH.
