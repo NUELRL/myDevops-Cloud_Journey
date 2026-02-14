@@ -4,7 +4,7 @@
 In this project, I deployed a complete web application infrastructure using the LEMP stack, an alternative to the traditional LAMP stack I implemented in [Task 1](../Task-1). This architecture replaces Apache with Nginx to achieve improved performance, scalability, and efficient resource utilization.
 
 **LEMP Stack Components:**
-- **L**inux (Ubuntu 22.04 LTS)
+- **L**inux (Ubuntu 24.04 LTS)
 - **E**ngine-X (Nginx) - High-performance web server
 - **M**ySQL - Relational database management system
 - **P**HP - Server-side scripting language
@@ -554,7 +554,7 @@ http://<Public_domain_or_IP>/todo_list.php
 ## Technologies Used
 
 - **Cloud Platform:** AWS EC2
-- **Operating System:** Ubuntu Server 22.04 LTS
+- **Operating System:** Ubuntu Server 24.04 LTS
 - **Web Server:** Nginx
 - **Database:** MySQL 8.0
 - **Programming Language:** PHP 8.3
