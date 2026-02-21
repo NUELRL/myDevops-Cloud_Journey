@@ -141,6 +141,11 @@ I started the server to verify it was working:
 node index.js
 ```
 
+Then i opened port `5000`
+
+![alt text](./images/task%203%20roles.jpg)
+
+
 I then visited `http://<EC2-Public-IP>:5000` in my browser and saw **"Welcome to Express"**.
 
 ![alt text](./images/task%203%20welcome%20to%20e.jpg)
@@ -490,6 +495,8 @@ This starts both the backend (port 5000) and the React frontend (port 3000) conc
 ```
 http://<EC2-Public-IP>:3000
 ```
+Had errors so i remebered to open port `:3000`
+![alt text](./images/task%203%20front%204.jpg)
 ![alt text](./images/task%203%20finalllleeeee.jpg)
 
 ---
