@@ -1,5 +1,28 @@
 # LAMP STACK IMPLEMENTATION (Linux, Apache, MySQL and PHP)
 
+## Project Overview
+
+This project documents the deployment of a complete web application infrastructure using the **LAMP stack** on AWS EC2. The LAMP stack is one of the most widely used open-source web development platforms, combining a Linux operating system, Apache web server, MySQL database, and PHP scripting language to deliver a robust and scalable server environment.
+
+**LAMP Stack Components:**
+- **L**inux (Ubuntu 24.04 LTS) — Operating system
+- **A**pache — High-performance, open-source HTTP web server
+- **M**ySQL — Relational database management system
+- **P**HP — Server-side scripting language for dynamic content
+
+---
+
+
+![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04_LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+![Apache](https://img.shields.io/badge/Apache-2.4-D22128?style=for-the-badge&logo=apache&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-8.x-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-EC2-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Shell Script](https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
+
+---
+
 ## Step 0 - Preparing Prerequisite
 
 - Create an AWS account.
@@ -18,7 +41,7 @@
 
 ## Step 1 - INSTALLING APACHE AND UPDATING THE FIREWALL
 
-- Install Apache using Ubuntu’s package manager `apt`
+- Install Apache using Ubuntu's package manager `apt`
 - Update a list of packages in package manager
   `sudo apt update`
 - Run apache2 package installation
@@ -61,7 +84,7 @@
   `sudo mysql_secure_installation`
 - This will ask if you want to configure the VALIDATE PASSWORD PLUGIN.
 - Answer Y for yes, or anything else to continue without enabling
-- When you’re finished, test if you’re able to log in to the MySQL console by typing:  
+- When you're finished, test if you're able to log in to the MySQL console by typing:  
   `sudo mysql -p`
 - To exit the MySQL console, type:
   `mysql> exit`
@@ -83,8 +106,7 @@
 - At this point, your LAMP stack is completely installed and fully operational.
 
       +Linux (Ubuntu)
-      +Apache
-      +HTTP Server
+      +Apache HTTP Server
       +MySQL
       +PHP
 
@@ -96,7 +118,7 @@
 - Next, assign ownership of the directory with your current system user:  
   `sudo chown -R $USER:$USER /var/www/projectlamp`
 
-- Create and open a new configuration file in Apache’s sites-available directory using:
+- Create and open a new configuration file in Apache's sites-available directory using:
   ` sudo vi /etc/apache2/sites-available/projectlamp.conf`
 
 ![alt text](<Images/14-Host-crt.jpg>)
@@ -119,23 +141,21 @@ CustomLog ${APACHE_LOG_DIR}/access.log combined
 
 - You can now use `a2ensite` command to enable the new virtual host:  
   `sudo a2ensite projectlamp`
-- To disable Apache’s default website use `a2dissite` command, type:
+- To disable Apache's default website use `a2dissite` command, type:
   `sudo a2dissite 000-default`
-- To make sure your configuration file doesn’t contain syntax errors, run:  
+- To make sure your configuration file doesn't contain syntax errors, run:  
   `sudo apache2ctl configtest`
 - Finally, reload Apache so these changes take effect:  
   `sudo systemctl reload apache2`
 - Your new website is now active, but the web root /var/www/projectlamp is still empty. Create an index.html file in that location so that we can test that the virtual host works as expected, run:
   `echo "Hello LAMP from hostname $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) with public IP $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4)" | sudo tee /var/www/projectlamp/index.html`
 
-
-
 ![alt text](<Images/16-echo2server.jpg>)
 
 - Now go to your browser and try to open your website URL using IP address:
   `http://<Public-IP-Address>:80`
 
-If you see the text from ‘echo’ command you wrote to index.html file, then it means your Apache virtual host is working as expected.
+If you see the text from 'echo' command you wrote to index.html file, then it means your Apache virtual host is working as expected.
 
 ![alt text](<Images/17-echoRes.jpg>)
 
@@ -143,7 +163,7 @@ If you see the text from ‘echo’ command you wrote to index.html file, then i
 
 - With the default DirectoryIndex settings on Apache, a file named index.html will always take precedence over an index.php file.
 
-- In case you want to change this behavior, you’ll need to edit the /etc/apache2/mods-enabled/dir.conf file and change the order in which the index.php file is listed within the DirectoryIndex directive, run :
+- In case you want to change this behavior, you'll need to edit the /etc/apache2/mods-enabled/dir.conf file and change the order in which the index.php file is listed within the DirectoryIndex directive, run :
 
 `sudo nano /etc/apache2/mods-enabled/dir.conf`
 
@@ -160,10 +180,7 @@ then edit it thus:
 
 `sudo systemctl reload apache2`
 
-
 ![alt text](<Images/18-apacheReload.jpg>)
-
-
 
 ![alt text](<Images/19hostInsert.jpg>)
 
@@ -183,3 +200,25 @@ phpinfo();
 - When you are finished, save and close the file, refresh the page and you will see a page similar to this:
 
 ![alt text](<Images/20php change.jpg>)
+
+---
+
+## Project Completion
+
+### What Was Accomplished
+
+**Apache Web Server:** Installed, configured, and serving web content  
+**MySQL Database:** Installed, secured, and managing data  
+**PHP Processing:** Installed and integrated with Apache via mod_php  
+**Virtual Host:** Configured for hosting a custom domain on one server  
+**PHP-MySQL Integration:** PHP successfully renders dynamic content from the server  
+
+## Technologies Used
+
+| Technology | Version | Purpose |
+|---|---|---|
+| ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=ubuntu&logoColor=white) Ubuntu | 24.04 LTS | Operating System |
+| ![Apache](https://img.shields.io/badge/Apache-D22128?style=flat-square&logo=apache&logoColor=white) Apache | 2.4 | Web Server |
+| ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white) MySQL | 8.0 | Database |
+| ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white) PHP | 8.x | Server-side Scripting |
+| ![AWS](https://img.shields.io/badge/AWS_EC2-FF9900?style=flat-square&logo=amazonaws&logoColor=white) AWS EC2 | t3.micro | Cloud Platform |

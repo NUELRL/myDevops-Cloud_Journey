@@ -3,13 +3,21 @@
 ## Project Overview
 In this project, I deployed a complete web application infrastructure using the LEMP stack, an alternative to the traditional LAMP stack I implemented in [Task 1](../Task-1). This architecture replaces Apache with Nginx to achieve improved performance, scalability, and efficient resource utilization.
 
+
+
+![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=ubuntu&logoColor=white) 
+| ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
+| ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+| ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white)
+| ![AWS](https://img.shields.io/badge/AWS_EC2-FF9900?style=flat-square&logo=amazonaws&logoColor=white) 
+
+
 **LEMP Stack Components:**
 - **L**inux (Ubuntu 24.04 LTS)
 - **E**ngine-X (Nginx) - High-performance web server
 - **M**ySQL - Relational database management system
 - **P**HP - Server-side scripting language
 
----
 
 ## Step 0: Preparing Prerequisites
 
@@ -551,11 +559,13 @@ http://<Public_domain_or_IP>/todo_list.php
 5. **MySQL Authentication:** Using mysql_native_password for PHP compatibility
 
 
+
 ## Technologies Used
 
-- **Cloud Platform:** AWS EC2
-- **Operating System:** Ubuntu Server 24.04 LTS
-- **Web Server:** Nginx
-- **Database:** MySQL 8.0
-- **Programming Language:** PHP 8.3
-- **Package Manager:** APT
+| Technology | Version | Purpose |
+|---|---|---|
+| ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=ubuntu&logoColor=white) Ubuntu | 24.04 LTS | Operating System |
+| ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white) Nginx | 1.24 | Web Server |
+| ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white) MySQL | 8.0 | Database |
+| ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white) PHP | 8.3 | Server-side Scripting |
+| ![AWS](https://img.shields.io/badge/AWS_EC2-FF9900?style=flat-square&logo=amazonaws&logoColor=white) AWS EC2 | t3.micro | Cloud Platform |

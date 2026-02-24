@@ -37,11 +37,6 @@ The React frontend runs in the browser and communicates with an Express/Node.js 
 
 ---
 
-
-> **Screenshot placeholder** – EC2 instance running with correct security group rules showing ports 22, 5000, and 3000 open
-
----
-
 ## Step 1 – Backend Configuration
 
 ### Update and Upgrade Ubuntu
