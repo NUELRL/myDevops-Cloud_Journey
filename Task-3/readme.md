@@ -53,10 +53,10 @@ sudo apt upgrade
 
 ### Install Node.js
 
-I fetched the Node.js 18.x setup script from the NodeSource repository and installed it:
+I fetched the Node.js 20.x setup script from the NodeSource repository and installed it:
 
 ```bash
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 ![alt text](./images/task%203%20curl%20-fsSL.jpg)
@@ -359,7 +359,7 @@ With the backend running, I tested all three API endpoints using Postman before 
   "action": "################"
 }
 ```
-
+![alt text](./images/task%203%20postman%20test.jpg)
 
 ### GET Request – Retrieve All Tasks
 
@@ -372,11 +372,7 @@ With the backend running, I tested all three API endpoints using Postman before 
 ### DELETE Request – Remove a Task
 
 - Method: `DELETE`
-- URL: `http://<EC2-Public-IP>:5000/api/todos
-
-![alt text](./images/task%203%20postman%20delReq.jpg)
-
-
+- URL: `http://<EC2-Public-IP>:5000/api/todos/id
 ---
 
 ## Step 6 – Frontend Creation with React
