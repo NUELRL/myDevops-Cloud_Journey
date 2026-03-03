@@ -171,7 +171,6 @@ sudo apt update && sudo apt upgrade
 sudo apt install mysql-client -y
 ```
 
-![Install MySQL Client](https://github.com/IwunzeGE/DevOps-Project/blob/f5ebc19e0f6692cf2cf39858b8de061a25381f92/CLIENT-SERVER%20ARCHITECTURE/images/install%20mysql-client.png)
 
 ---
 
