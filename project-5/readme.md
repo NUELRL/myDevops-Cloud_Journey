@@ -125,8 +125,6 @@ I exited the MySQL shell and tested that the new user worked:
 mysql -u example_user -p
 ```
 
-![First User Login](https://github.com/IwunzeGE/DevOps-Project/blob/f5ebc19e0f6692cf2cf39858b8de061a25381f92/CLIENT-SERVER%20ARCHITECTURE/images/first%20user.png)
-
 Once logged in, I confirmed the database was visible:
 
 ```sql
