@@ -1,15 +1,15 @@
 # LEMP STACK IMPLEMENTATION (Linux, Nginx, MySQL and PHP)
 
 ## Project Overview
-In this project, I deployed a complete web application infrastructure using the LEMP stack, an alternative to the traditional LAMP stack I implemented in [Task 1](../Task-1). This architecture replaces Apache with Nginx to achieve improved performance, scalability, and efficient resource utilization.
+In this project, I deployed a complete web application infrastructure using the LEMP stack, an alternative to the traditional LAMP stack I implemented in [Project 1](../project-1). This architecture replaces Apache with Nginx to achieve improved performance, scalability, and efficient resource utilization.
 
 
 
-![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=ubuntu&logoColor=white) 
-| ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
-| ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-| ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white)
-| ![AWS](https://img.shields.io/badge/AWS_EC2-FF9900?style=flat-square&logo=amazonaws&logoColor=white) 
+ ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=ubuntu&logoColor=white) 
+ ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
+ ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+ ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white)
+ ![AWS](https://img.shields.io/badge/AWS_EC2-FF9900?style=flat-square&logo=amazonaws&logoColor=white) 
 
 
 **LEMP Stack Components:**

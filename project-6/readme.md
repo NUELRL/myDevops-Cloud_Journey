@@ -31,3 +31,38 @@ Three-tier Architecture is a client-server software architecture pattern that co
 ![alt](./images/task%206%20attach%20volumes.jpg)
 
 ![alt](./images/task%206%20volumes.jpg)
+
+3. Open up the Linux terminal to begin configuration Use `lsblk` command to inspect what block devices are attached to the server. Notice names of your newly created devices. All devices in Linux reside in /dev/ directory. Inspect it with `ls /dev/` and make sure you see all 3 newly created block devices there – their names will likely be xvdf, xvdh, xvdg.
+
+![al](./images/task%206%20lsblk.jpg)
+
+![a](./images/task%206%20ls%20dev.jpg)
+
+4.	Use df -h command to see all mounts and free space on your server
+
+![al](./images/task%206%20df.jpg)
+
+5.	Use fdisk utility to create a single partition on each of the 3 disks
+`sudo fdisk /dev/xvdf`
+
+![al](./images/task%206%20fdisk.jpg)
+
+6.	Use `lsblk` utility to view the newly configured partition on each of the 3 disks.
+
+![al](./images/task%206%20lsblk.jpg)
+
+7. Install lvm2 package using `sudo yum install lvm2`. Run sudo lvmdiskscan command to check for available partitions.
+
+*Note: yum is the package installer for RedHat/CentOS*
+
+8. Use `pvcreate` utility to mark each of 3 disks as physical volumes (PVs) to be used by LVM
+
+```sudo pvcreate /dev/xvdf1
+sudo pvcreate /dev/xvdg1
+sudo pvcreate /dev/xvdh1
+```
+![a](./images/task%206%20pvcreate.jpg)
+
+9.	Verify that your Physical volume has been created successfully by running `sudo pvs`
+
+![a](./images/task%206%20pvcreate.jpg)
