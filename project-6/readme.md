@@ -13,6 +13,9 @@
 
 In this project, I set up a full web solution using WordPress on two Linux servers in AWS. One server runs the WordPress website and another runs the MySQL database  and I configured the storage on both servers from scratch using disk partitioning and LVM (Logical Volume Manager).
 
+`For large enterprise environments, I would choose Red Hat Enterprise Linux because it provides strong security policies, long-term stability, and dedicated enterprise-level support but in this project i chose good old UBUNTU`
+
+
 ### Why does this matter in real life?
 
 Your browser just sent a request. Somewhere, a server caught it, handed it to a database, and fired back a response all before you finished blinking. That split-second chain of events is what I spent my time building from scratch. Two servers, one purpose: don't break.
@@ -40,7 +43,7 @@ My setup used:
 
 ### Launch the EC2 Instance and Attach Volumes
 
-I launched a RedHat EC2 instance to serve as my web server, then created **3 volumes of 10 GiB each** in the same availability zone and attached them to the instance.
+I launched a EC2 instance to serve as my web server, then created **3 volumes of 10 GiB each** in the same availability zone and attached them to the instance.
 
 ![EC2 Instance](./images/task%206%20ec2.jpg)
 
@@ -199,7 +202,7 @@ I ran `df -h` one more time to confirm everything was mounted correctly:
 
 ## Step 2: Prepare the Database Server
 
-I launched a second RedHat EC2 instance for the database server and repeated all the same disk setup steps from Step 1. The only differences were:
+I launched a second EC2 instance for the database server and repeated all the same disk setup steps from Step 1. The only differences were:
 
 - I created `db-lv` instead of `apps-lv`
 - I mounted it to `/db` instead of `/var/www/html`
