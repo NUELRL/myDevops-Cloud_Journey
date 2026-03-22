@@ -16,10 +16,6 @@ In this project, I set up a full web solution using WordPress on two Linux serve
 `For large enterprise environments, I would choose Red Hat Enterprise Linux because it provides strong security policies, long-term stability, and dedicated enterprise-level support but in this project i chose good old UBUNTU`
 
 
-### Why does this matter in real life?
-
-Your browser just sent a request. Somewhere, a server caught it, handed it to a database, and fired back a response all before you finished blinking. That split-second chain of events is what I spent my time building from scratch. Two servers, one purpose: don't break.
-
 ---
 
 ## Three-Tier Architecture
