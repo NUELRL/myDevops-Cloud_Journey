@@ -11,7 +11,7 @@
 
 ## Overview
 
-In [Projectr 7](../project-7) I had three web servers all serving the same content via NFS. The problem was each one had its own IP address, meaning a user would need three different URLs to access them. That makes no sense in the real world. This project fixes that by putting a single load balancer in front of all of them.
+In [Project 7](../project-7) I had three web servers all serving the same content via NFS. The problem was each one had its own IP address, meaning a user would need three different URLs to access them. That makes no sense in the real world. This project fixes that by putting a single load balancer in front of all of them.
 
 In this project, I added an **Apache Load Balancer** on top of the Tooling Website I built in the previous project. Instead of users having to know and pick between three different server addresses, the load balancer sits in front of everything and handles traffic for them one address, multiple servers working behind the scenes.
 
