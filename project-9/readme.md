@@ -53,6 +53,7 @@ https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
 sudo apt update 
 
 sudo apt install jenkins
+
 ```
 
 ![](./images/task%209%20jen%20is.jpg)
@@ -79,7 +80,7 @@ I opened a browser and went to:
 ```
 http://<Jenkins-Server-Public-IP>:8080
 ```
-![](./images/task%209%20prompet.jpg\)
+![](./images/task%209%20prompet.jpg)
 
 
 Jenkins asked for an initial admin password. I grabbed it from the server:
