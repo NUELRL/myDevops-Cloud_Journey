@@ -43,13 +43,16 @@ sudo apt install default-jdk-headless -y
 Then I added the Jenkins repository and installed it:
 
 ```bash
-wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
+https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key 
 
-sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
-    /etc/apt/sources.list.d/jenkins.list'
+echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
+https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+/etc/apt/sources.list.d/jenkins.list > /dev/null
 
-sudo apt update
-sudo apt-get install jenkins -y
+sudo apt update 
+
+sudo apt install jenkins
 ```
 
 ![](./images/task%209%20jen%20is.jpg)
