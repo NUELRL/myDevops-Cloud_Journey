@@ -153,7 +153,7 @@ I made a small change to the `README.md` file in the GitHub repository and pushe
 The build artifacts are stored locally on the Jenkins server at:
 
 ```
-/var/lib/jenkins/jobs/tooling_github/builds/<build_number>/archive/
+/var/lib/jenkins/jobs/pipeline/builds/<build_number>/archive/
 ```
 
 ![](./images/task%209%20checking%20build%20from%20linux.jpg)
@@ -204,12 +204,8 @@ I configured it to:
 
 I saved and pushed another change to the GitHub `README.md`.
 
-The build triggered automatically. In the console output I saw:
+The build triggered automatically. In the console output I saw the success logs
 
-```
-SSH: Transferred 25 file(s)
-Finished: SUCCESS
-```
 
 ### Verify the Files Landed on the NFS Server
 

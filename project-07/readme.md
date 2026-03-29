@@ -25,7 +25,7 @@ In my project, the NFS server stores the website files in `/mnt/apps`, and each 
 I also used NFS for logs by mounting `/var/log/httpd` from all web servers to one shared location. Instead of checking logs on three different machines, everything shows up in one place, which makes debugging much easier.
 
 
- ### Seems great but if the NFS server goes down this means all the Webserver loses all thier files. Hmm, i think in a prod environment i'll consider Amazon EFS just incase .
+ > Seems great but if the NFS server goes down this means all the Webserver loses all thier files. Hmm, i think in a prod environment i'll consider Amazon EFS just incase .
 
 ---
 

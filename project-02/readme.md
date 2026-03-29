@@ -1,7 +1,7 @@
 # LEMP STACK IMPLEMENTATION (Linux, Nginx, MySQL and PHP)
 
 ## Project Overview
-In this project, I deployed a complete web application infrastructure using the LEMP stack, an alternative to the traditional LAMP stack I implemented in [Project 1](../project-1). This architecture replaces Apache with Nginx to achieve improved performance, scalability, and efficient resource utilization.
+In this project, I deployed a complete web application infrastructure using the LEMP stack, an alternative to the traditional LAMP stack I implemented in [Project 1](../project-01). This architecture replaces Apache with Nginx to achieve improved performance, scalability, and efficient resource utilization.
 
 
 

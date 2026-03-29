@@ -13,7 +13,7 @@
 
 In this project, I set up a full web solution using WordPress on two Linux servers in AWS. One server runs the WordPress website and another runs the MySQL database  and I configured the storage on both servers from scratch using disk partitioning and LVM (Logical Volume Manager).
 
-`For large enterprise environments, I would choose Red Hat Enterprise Linux because it provides strong security policies, long-term stability, and dedicated enterprise-level support but in this project i chose good old UBUNTU`
+> For large enterprise environments, I would choose Red Hat Enterprise Linux because it provides strong security policies, long-term stability, and dedicated enterprise-level support but in this project i chose good old UBUNTU`
 
 
 ---
